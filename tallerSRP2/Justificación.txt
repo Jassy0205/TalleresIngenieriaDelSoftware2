@@ -1,0 +1,10 @@
+Inicialmente se propone un ejercicio donde se dan las clases cliente y factura, teniendo en ellas diferentes métodos, tales como guardarFactura(), enviarEmailFactura(), guardarCliente(), generarReporteFacturas() y enviarFacturaDian(); pues se considera que al tener cierto grado de relación con las clases ya mencionadas podrían incluirse en la lógica principal de las mismas. 
+
+Aplicando el principio SRP se decide dividir las clases, generando algunas otras y aplicando los métodos a las mismas: 
+
+- Principalmente se decide tomar los métodos que guardan la información y adicionarlos cada uno a una clase que gestiona las facturas y los clientes, teniendo en cuenta que el almacenamiento de datos no es una funcionalidad base de las mismas, puesto que no se relacionan con su manejo de datos, atributos o comportamientos, además de que proporcionar la gestión de su información en relación a la base de datos significaría agregar más responsabilidades.
+
+- Seguidamente se crean dos clases: una para el envío de emails a los clientes con las facturas correspondiente y otra que permite el envío de facturas a la DIAN, esto considerando que la acción de enviar facturas no es un comportamiento propio de las facturas.
+
+- Posteriormente se establece una clase para el servicio de reportes con el fin de generar reportes mensuales de las facturas del mes actual, lo anterior en consideración al hecho de que la generación de reportes es una tarea distinta al manejo de la lógica de las facturas (que es lo que se realiza en la clase "Factura").
+

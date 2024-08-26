@@ -1,0 +1,3 @@
+Como se tiene el código originalmente, si se desea agregar otro tipo de envío se debería modificar la función "calcularCosto" para que tenga un "if", donde se pregunte si "this" es instancia del otro envío que se quiera adicionar (como envío internacional).
+
+Una vez que se ha refactorizado el código, en caso de se pretenda agregar un nuevo tipo de envío (como el envío internacional), se crea otra clase que implemente la interfaz "Envio" y sus métodos (en este caso, el de calcular costos u otro que se desee agregar). Lo anterior siguiendo el OCP, donde se establece que se pueden añadir nuevas funcionalidades o comportamientos, pero sin modificar el código existente.
