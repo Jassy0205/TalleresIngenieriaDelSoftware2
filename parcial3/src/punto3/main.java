@@ -14,8 +14,8 @@ public class main {
 
         SistemaPago adapter = new NuevoSistemaPagoAdapter(sistemaPago);
 
-        adapter.crearSesion("Juan Pérez", "juan.perez@example.com");
-        adapter.validarCorreo("juan.perez@example.com");
+        adapter.crearSesion("Jassy Perea", "jassy.perea@gmail.com");
+        adapter.validarCorreo("jassy.perea@gmail.com");
         adapter.validarAutorizacion();
         adapter.realizarPago();
     }
